@@ -1,0 +1,181 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node {
+    int info;
+    struct node* next;
+};
+
+struct node* start = NULL;
+
+void create();
+void traversal();
+void insert();
+void delete();
+void search();
+
+int main() {
+    int choice;
+    while (1) {
+        printf("\n***SINGLE LINKED LIST OPERATIONS:****\n");
+        printf("\n1. Create\n");
+        printf("\n2. Traversal\n");
+        printf("\n3. Insert into a linked list\n");
+        printf("\n4. Delete from linked list\n");
+        printf("\n5. Searching an element\n");
+        printf("\n6. Exit\n");
+        printf("Enter your choice:\t");
+        scanf("%d", &choice);
+        switch (choice) {
+            case 1:
+                create();
+                break;
+            case 2:
+                traversal();
+                break;
+            case 3:
+                insert();
+                break;
+            case 4:
+                delete();
+                break;
+            case 5:
+                search();
+                break;
+            case 6:
+                return 0;
+            default:
+                printf("Wrong choice:\n");
+        }
+    }
+}
+
+void create() {
+    struct node* temp, *ptr;
+    char ch;
+    ptr = start = temp = (struct node*)malloc(sizeof(struct node));
+    if (temp == NULL) {
+        printf("\nOut of Memory Space:\n");
+        exit(0);
+    }
+    start->next = NULL;
+    printf("\nEnter the data value for the node:\t");
+    scanf("%d", &temp->info);
+    getchar();
+    printf("Want to create more nodes (y/n)? ");
+    scanf("%c", &ch);
+    while (ch == 'y') {
+        temp = (struct node*)malloc(sizeof(struct node));
+        printf("\nEnter the data value for the node:\t");
+        scanf("%d", &temp->info);
+        ptr->next = temp;
+        ptr = temp;
+        getchar();
+        printf("Want to create more nodes (y/n)? ");
+        scanf("%c", &ch);
+    }
+    ptr->next = NULL;
+}
+
+void traversal() {
+    struct node* ptr;
+    if (start == NULL) {
+        printf("\nList is empty:\n");
+        return;
+    }
+    else {
+        ptr = start;
+        printf("\nThe List elements are:\n");
+        while (ptr != NULL) {
+            printf("%d\t", ptr->info);
+            ptr = ptr->next;
+        }
+    }
+}
+
+void insert() {
+    struct node* ptr, *temp;
+    int i, pos;
+    temp = (struct node*)malloc(sizeof(struct node));
+    if (temp == NULL) {
+        printf("\nOut of Memory Space:\n");
+        return;
+    }
+    printf("\nEnter the position for the new node to be inserted:\t");
+    scanf("%d", &pos);
+    printf("\nEnter the data value of the node:\t");
+    scanf("%d", &temp->info);
+    temp->next = NULL;
+    if (pos == 0) {
+        temp->next = start;
+        start = temp;
+    }
+    else {
+        for (i = 0, ptr = start; i < pos - 1; i++) {
+            ptr = ptr->next;
+            if (ptr == NULL) {
+                printf("\nPosition not found:\n");
+                return;
+            }
+        }
+        temp->next = ptr->next;
+        ptr->next = temp;
+    }
+}
+
+void delete() {
+    int i, pos;
+    struct node* temp, *ptr;
+    if (start == NULL) {
+        printf("\nThe List is Empty:\n");
+        exit(0);
+    }
+    else {
+        printf("\nEnter the position of the node to be deleted:\t");
+        scanf("%d", &pos);
+        if (pos == 0) {
+            ptr = start;
+            start = start->next;
+            printf("\nThe deleted element is:%d\t", ptr->info);
+            free(ptr);
+        }
+        else {
+            ptr = start;
+            for (i = 0; i < pos; i++) {
+                temp = ptr;
+                ptr = ptr->next;
+                if (ptr == NULL) {
+                    printf("\nPosition not Found:\n");
+                    return;
+                }
+            }
+            temp->next = ptr->next;
+            printf("\nThe deleted element is:%d\t", ptr->info);
+            free(ptr);
+        }
+    }
+}
+
+void search() {
+    struct node* ptr;
+    int temp;
+    printf("Enter the element to be searched: ");
+    scanf("%d", &temp);
+    if (start == NULL) {
+        printf("\nList is empty:\n");
+        return;
+    }
+    else {
+        ptr=start;
+while(ptr!=NULL)
+{
+if(ptr->info==temp)
+{
+printf("Element found at position : %d\t",ptr->next);
+exit(0);
+}
+else
+ptr=ptr->next ;
+}
+}
+}
