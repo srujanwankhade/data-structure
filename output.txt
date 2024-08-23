@@ -1,0 +1,99 @@
+***SINGLE LINKED LIST OPERATIONS:****
+1. Create
+2. Traversal
+3. Insert into a linked list
+4. Delete from linked list
+5. Searching an element
+6. Exit
+Enter your choice: 1
+
+Enter the data value for the node: 10
+Want to create more nodes (y/n)? y
+
+Enter the data value for the node: 20
+Want to create more nodes (y/n)? y
+
+Enter the data value for the node: 30
+Want to create more nodes (y/n)? n
+
+***SINGLE LINKED LIST OPERATIONS:****
+1. Create
+2. Traversal
+3. Insert into a linked list
+4. Delete from linked list
+5. Searching an element
+6. Exit
+Enter your choice: 2
+
+The List elements are:
+10	20	30
+
+***SINGLE LINKED LIST OPERATIONS:****
+1. Create
+2. Traversal
+3. Insert into a linked list
+4. Delete from linked list
+5. Searching an element
+6. Exit
+Enter your choice: 3
+
+Enter the position for the new node to be inserted: 1
+Enter the data value of the node: 25
+
+***SINGLE LINKED LIST OPERATIONS:****
+1. Create
+2. Traversal
+3. Insert into a linked list
+4. Delete from linked list
+5. Searching an element
+6. Exit
+Enter your choice: 2
+
+The List elements are:
+10	25	20	30
+
+***SINGLE LINKED LIST OPERATIONS:****
+1. Create
+2. Traversal
+3. Insert into a linked list
+4. Delete from linked list
+5. Searching an element
+6. Exit
+Enter your choice: 4
+
+Enter the position of the node to be deleted: 1
+
+The deleted element is:25
+
+***SINGLE LINKED LIST OPERATIONS:****
+1. Create
+2. Traversal
+3. Insert into a linked list
+4. Delete from linked list
+5. Searching an element
+6. Exit
+Enter your choice: 2
+
+The List elements are:
+10	20	30
+
+***SINGLE LINKED LIST OPERATIONS:****
+1. Create
+2. Traversal
+3. Insert into a linked list
+4. Delete from linked list
+5. Searching an element
+6. Exit
+Enter your choice: 5
+
+Enter the element to be searched: 20
+Element found at position : 20
+
+***SINGLE LINKED LIST OPERATIONS:****
+1. Create
+2. Traversal
+3. Insert into a linked list
+4. Delete from linked list
+5. Searching an element
+6. Exit
+Enter your choice: 6
