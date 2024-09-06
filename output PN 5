@@ -1,0 +1,116 @@
+****** MENU ******
+1. Create
+2. Display
+3. Display list in reverse direction
+4. Search a node
+5. Delete a node
+6. Insert a node
+7. Exit
+Enter your choice: 1
+
+Enter data for first node: 10
+Create more nodes (y/n): y
+
+Enter data for next node: 20
+Create more nodes (y/n): y
+
+Enter data for next node: 30
+Create more nodes (y/n): n
+
+****** MENU ******
+1. Create
+2. Display
+3. Display list in reverse direction
+4. Search a node
+5. Delete a node
+6. Insert a node
+7. Exit
+Enter your choice: 2
+
+10 20 30
+
+****** MENU ******
+1. Create
+2. Display
+3. Display list in reverse direction
+4. Search a node
+5. Delete a node
+6. Insert a node
+7. Exit
+Enter your choice: 3
+
+30 20 10
+
+****** MENU ******
+1. Create
+2. Display
+3. Display list in reverse direction
+4. Search a node
+5. Delete a node
+6. Insert a node
+7. Exit
+Enter your choice: 4
+
+Enter element to search: 20
+Item 20 found at node 2
+
+****** MENU ******
+1. Create
+2. Display
+3. Display list in reverse direction
+4. Search a node
+5. Delete a node
+6. Insert a node
+7. Exit
+Enter your choice: 5
+
+Enter element to delete: 20
+Item 20 found at node 2
+
+****** MENU ******
+1. Create
+2. Display
+3. Display list in reverse direction
+4. Search a node
+5. Delete a node
+6. Insert a node
+7. Exit
+Enter your choice: 2
+
+10 30
+
+****** MENU ******
+1. Create
+2. Display
+3. Display list in reverse direction
+4. Search a node
+5. Delete a node
+6. Insert a node
+7. Exit
+Enter your choice: 6
+
+Enter element after which to insert: 10
+Item 10 found at node 1
+Enter element to insert: 25
+
+****** MENU ******
+1. Create
+2. Display
+3. Display list in reverse direction
+4. Search a node
+5. Delete a node
+6. Insert a node
+7. Exit
+Enter your choice: 2
+
+10 25 30
+
+****** MENU ******
+1. Create
+2. Display
+3. Display list in reverse direction
+4. Search a node
+5. Delete a node
+6. Insert a node
+7. Exit
+Enter your choice: 7
