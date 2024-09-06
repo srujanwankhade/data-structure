@@ -1,0 +1,187 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node {
+    int data;
+    struct node *next;
+    struct node *prev;
+} *start = NULL, *loc, *locp;
+
+void create();
+void disp();
+void printreverse();
+void delete(int);
+void findb(int);
+void insertafter(struct node*,int);
+void insertbeg(int);
+struct node *search(int); // Function prototype added here
+
+int main()
+{
+    int choice, item, ele;
+    struct node *t;
+    while(1)
+    {
+        printf("\n\n****** MENU ******\n");
+        printf("1. Create\n");
+        printf("2. Display\n");
+        printf("3. Display list in reverse direction\n");
+        printf("4. Search a node\n");
+        printf("5. Delete a node\n");
+        printf("6. Insert a node\n");
+        printf("7. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+        switch(choice)
+        {
+            case 1 : create();
+                     break;
+            case 2: disp();
+                     break;
+            case 3 : printreverse();
+                     break;
+            case 4 : printf("Enter element to search : ");
+                     scanf("%d",&item);
+                     search(item);
+                     break;
+            case 5 : printf("Enter element to delete :");
+                     scanf("%d",&item);
+                     search(item);
+                     delete(item);
+                     break;
+            case 6 : printf("Enter element after which to insert :");
+                     scanf("%d",&ele);
+                     t=search(ele);
+                     printf("Enter element to insert :");
+                     scanf("%d",&item);
+                     insertafter(t,item);
+                     break;
+            case 7 : exit(0);
+        }
+    }
+    return 0;
+}
+
+void create()
+{
+    struct node *ptr, *new1;
+    char ch;
+    start = ptr = (struct node *)malloc(sizeof(struct node));
+    printf("Enter data for first node : ");
+    scanf("%d",&start->data);
+    start->prev=NULL;
+    getchar();
+    printf("Create more nodes (y/n) : ");
+    scanf("%c",&ch);
+    while(ch=='y')
+    {
+        new1 = (struct node *)malloc(sizeof(struct node));
+        printf("\nEnter data for next node : ");
+        scanf("%d",&new1->data);
+        getchar();
+        ptr->next = new1;
+        new1->prev=ptr;
+        ptr=new1;
+        printf("\nCreate more nodes (y/n) : ");
+        scanf("%c",&ch);
+    }
+    ptr->next=NULL;
+    return;
+}
+
+void disp()
+{
+    struct node *ptr;
+    ptr=start;
+    while(ptr!=NULL)
+    {
+        printf("%d ", ptr->data);
+        ptr=ptr->next;
+    }
+    printf("\n");
+}
+
+void printreverse()
+{
+    struct node *ptr;
+    ptr= start;
+    while(ptr->next!=NULL)
+        ptr=ptr->next;
+    while(ptr!=NULL)
+    {
+        printf("%d ", ptr->data);
+        ptr=ptr->prev;
+    }
+    printf("\n");
+}
+
+void delete(int item)
+{
+    if (loc==start)
+    {
+        start=start->next;
+        if (start != NULL)
+            start->prev=NULL;
+        return;
+    }
+    else{
+        (loc->prev)->next=loc->next;
+        if(loc->next!=NULL)
+            (loc->next)->prev=loc->prev;
+        return;
+    }
+}
+
+struct node * search(int item)
+{
+    struct node *ptr;
+    int count = 1;
+    ptr= start;
+    while(ptr!=NULL)
+    {
+        if(ptr->data==item)
+        {
+            printf("Item %d found at node %d\n", item, count);
+            loc=ptr;
+            return ptr;
+        }
+        count++;
+        ptr=ptr->next;
+    }
+    printf("Item not found\n");
+    loc = NULL;
+    return loc;
+}
+
+void insertafter(struct node *t, int item)
+    {
+        if (t==NULL || start ==NULL)
+        {
+        insertbeg(item);
+        return;
+        }
+            struct node *ptr;
+                ptr = (struct node *)malloc(sizeof(struct node));
+                ptr->data=item;
+        if(t->next!=NULL)
+        {
+            ptr->next=t->next;
+            (t->next)->prev=ptr;
+        }
+        else
+            ptr->next=NULL;
+            ptr->prev=t;
+            t->next=ptr;
+    }
+
+void insertbeg(int item)
+{
+    struct node *ptr;
+    ptr = (struct node *)malloc(sizeof(struct node));
+    ptr->data=item;
+    ptr->next=start;
+    if (start != NULL)
+        start->prev=ptr;
+    ptr->prev=NULL;
+    start=ptr;
+}
