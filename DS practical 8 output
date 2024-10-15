@@ -1,0 +1,139 @@
+--------CIRCULAR QUEUE OPERATIONS-----------
+1.Insert
+2.Delete
+3.Display
+4.Exit
+ ---------------------- 
+Enter your choice:   1
+Enter the element to be inserted:    10
+
+--------CIRCULAR QUEUE OPERATIONS-----------
+1.Insert
+2.Delete
+3.Display
+4.Exit
+ ---------------------- 
+Enter your choice:   1
+Enter the element to be inserted:    20
+
+--------CIRCULAR QUEUE OPERATIONS-----------
+1.Insert
+2.Delete
+3.Display
+4.Exit
+ ---------------------- 
+Enter your choice:   1
+Enter the element to be inserted:    30
+
+--------CIRCULAR QUEUE OPERATIONS-----------
+1.Insert
+2.Delete
+3.Display
+4.Exit
+ ---------------------- 
+Enter your choice:   3
+
+The queue elements are:
+10      20      30      
+
+--------CIRCULAR QUEUE OPERATIONS-----------
+1.Insert
+2.Delete
+3.Display
+4.Exit
+ ---------------------- 
+Enter your choice:   2
+
+The deleted element: 10
+
+--------CIRCULAR QUEUE OPERATIONS-----------
+1.Insert
+2.Delete
+3.Display
+4.Exit
+ ---------------------- 
+Enter your choice:   3
+
+The queue elements are:
+20      30      
+
+--------CIRCULAR QUEUE OPERATIONS-----------
+1.Insert
+2.Delete
+3.Display
+4.Exit
+ ---------------------- 
+Enter your choice:   1
+Enter the element to be inserted:    40
+
+--------CIRCULAR QUEUE OPERATIONS-----------
+1.Insert
+2.Delete
+3.Display
+4.Exit
+ ---------------------- 
+Enter your choice:   1
+Enter the element to be inserted:    50
+
+--------CIRCULAR QUEUE OPERATIONS-----------
+1.Insert
+2.Delete
+3.Display
+4.Exit
+ ---------------------- 
+Enter your choice:   1
+Enter the element to be inserted:    60
+
+Queue Overflow:
+
+--------CIRCULAR QUEUE OPERATIONS-----------
+1.Insert
+2.Delete
+3.Display
+4.Exit
+ ---------------------- 
+Enter your choice:   3
+
+The queue elements are:
+20      30      40      50      
+
+--------CIRCULAR QUEUE OPERATIONS-----------
+1.Insert
+2.Delete
+3.Display
+4.Exit
+ ---------------------- 
+Enter your choice:   2
+
+The deleted element: 20
+
+--------CIRCULAR QUEUE OPERATIONS-----------
+1.Insert
+2.Delete
+3.Display
+4.Exit
+ ---------------------- 
+Enter your choice:   3
+
+The queue elements are:
+30      40      50      
+
+--------CIRCULAR QUEUE OPERATIONS-----------
+1.Insert
+2.Delete
+3.Display
+4.Exit
+ ---------------------- 
+Enter your choice:   1
+Enter the element to be inserted:    70
+
+--------CIRCULAR QUEUE OPERATIONS-----------
+1.Insert
+2.Delete
+3.Display
+4.Exit
+ ---------------------- 
+Enter your choice:   3
+
+The queue elements are:
+30      40      50      70      
