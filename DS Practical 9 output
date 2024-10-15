@@ -1,0 +1,100 @@
+Perform operations on the stack:
+1.Push the element
+2.Pop the element
+3.Show
+4.End
+
+Enter the choice: 1
+
+Enter the element to be added onto the stack: 10
+
+Perform operations on the stack:
+1.Push the element
+2.Pop the element
+3.Show
+4.End
+
+Enter the choice: 1
+
+Enter the element to be added onto the stack: 20
+
+Perform operations on the stack:
+1.Push the element
+2.Pop the element
+3.Show
+4.End
+
+Enter the choice: 3
+
+Elements present in the stack: 
+20
+10
+
+Perform operations on the stack:
+1.Push the element
+2.Pop the element
+3.Show
+4.End
+
+Enter the choice: 2
+
+Popped element: 20
+
+Perform operations on the stack:
+1.Push the element
+2.Pop the element
+3.Show
+4.End
+
+Enter the choice: 3
+
+Elements present in the stack: 
+10
+
+Perform operations on the stack:
+1.Push the element
+2.Pop the element
+3.Show
+4.End
+
+Enter the choice: 1
+
+Enter the element to be added onto the stack: 30
+
+Perform operations on the stack:
+1.Push the element
+2.Pop the element
+3.Show
+4.End
+
+Enter the choice: 1
+
+Enter the element to be added onto the stack: 40
+
+Perform operations on the stack:
+1.Push the element
+2.Pop the element
+3.Show
+4.End
+
+Enter the choice: 1
+
+Enter the element to be added onto the stack: 50
+
+Overflow!!
+
+Perform operations on the stack:
+1.Push the element
+2.Pop the element
+3.Show
+4.End
+
+Enter the choice: 4
+
+
+Explanation of the Output
+1. Push Operations: The user can push elements onto the stack (e.g., 10, 20, 30, 40). The stack can hold a maximum of 4 elements due to the defined SIZE.
+2. Show Operation: The user can view the elements currently in the stack. The output shows the elements in reverse order since the last pushed element is at the top of the stack.
+3. Pop Operation: The user can remove the top element from the stack. The popped element is displayed.
+4. Overflow Condition: When the user tries to push a fifth element (e.g., 50), the program outputs "Overflow!!" because the stack has reached its maximum capacity.
+5. Exit Operation: The user can exit the program by selecting option 4.
