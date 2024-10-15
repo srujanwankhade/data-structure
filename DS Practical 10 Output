@@ -9,7 +9,7 @@ The Postorder traversal of given binary tree is -
 
 
 
-Here is the alternative way:-         
+#Here is the alternative way:-         
 
 #include <stdio.h>
 #include <stdlib.h>
