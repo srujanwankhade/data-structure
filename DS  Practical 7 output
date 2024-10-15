@@ -1,0 +1,101 @@
+--------QUEUE OPERATIONS-----------
+1. Insert
+2. Delete
+3. Display
+4. Exit
+ ---------------------- 
+Enter your choice: 1
+
+Enter the element to be inserted:    10
+
+--------QUEUE OPERATIONS-----------
+1. Insert
+2. Delete
+3. Display
+4. Exit
+ ---------------------- 
+Enter your choice: 1
+
+Enter the element to be inserted:    20
+
+--------QUEUE OPERATIONS-----------
+1. Insert
+2. Delete
+3. Display
+4. Exit
+ ---------------------- 
+Enter your choice: 1
+
+Enter the element to be inserted:    30
+
+--------QUEUE OPERATIONS-----------
+1. Insert
+2. Delete
+3. Display
+4. Exit
+ ---------------------- 
+Enter your choice: 3
+
+The queue elements are:
+10      20      30      
+
+--------QUEUE OPERATIONS-----------
+1. Insert
+2. Delete
+3. Display
+4. Exit
+ ---------------------- 
+Enter your choice: 2
+
+The deleted element: 10  
+
+--------QUEUE OPERATIONS-----------
+1. Insert
+2. Delete
+3. Display
+4. Exit
+ ---------------------- 
+Enter your choice: 3
+
+The queue elements are:
+20      30      
+
+--------QUEUE OPERATIONS-----------
+1. Insert
+2. Delete
+3. Display
+4. Exit
+ ---------------------- 
+Enter your choice: 1
+
+Enter the element to be inserted:    40
+
+--------QUEUE OPERATIONS-----------
+1. Insert
+2. Delete
+3. Display
+4. Exit
+ ---------------------- 
+Enter your choice: 1
+
+Enter the element to be inserted:    50
+
+--------QUEUE OPERATIONS-----------
+1. Insert
+2. Delete
+3. Display
+4. Exit
+ ---------------------- 
+Enter your choice: 1
+
+Enter the element to be inserted:    60
+
+Queue Overflow: Cannot insert 60
+
+--------QUEUE OPERATIONS-----------
+1. Insert
+2. Delete
+3. Display
+4. Exit
+ ---------------------- 
+Enter your choice: 4
