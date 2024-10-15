@@ -1,0 +1,162 @@
+The Preorder traversal of given binary tree is -
+36 26 21 11 24 31 46 41 51 56 66 
+
+The Inorder traversal of given binary tree is -
+11 21 24 26 31 36 41 46 51 56 66 
+
+The Postorder traversal of given binary tree is -
+11 24 21 31 26 41 51 66 56 46 36 
+
+
+
+                                                                                                                    Here is the alternative way:-
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct node {
+    int element;
+    struct node* left;
+    struct node* right;
+};
+
+/*To create a new node*/
+struct node* createNode(int val)
+{
+    struct node* Node = (struct node*)malloc(sizeof(struct node));
+    Node->element = val;
+    Node->left = NULL;
+    Node->right = NULL;
+    return (Node);
+}
+
+/*function to traverse the nodes of binary tree in preorder*/
+void traversePreorder(struct node* root)
+{
+    if (root == NULL)
+        return;
+    printf(" %d ", root->element);
+    traversePreorder(root->left);
+    traversePreorder(root->right);
+}
+
+/*function to traverse the nodes of binary tree in inorder*/
+void traverseInorder(struct node* root)
+{
+    if (root == NULL)
+        return;
+    traverseInorder(root->left);
+    printf(" %d ", root->element);
+    traverseInorder(root->right);
+}
+
+/*function to traverse the nodes of binary tree in postorder*/
+void traversePostorder(struct node* root)
+{
+    if (root == NULL)
+        return;
+    traversePostorder(root->left);
+    traversePostorder(root->right);
+    printf(" %d ", root->element);
+}
+
+int main()
+{
+    int root_val, left_val, right_val, left_left_val, left_right_val, left_left_left_val, left_left_right_val, right_left_val, right_right_val, right_right_left_val, right_right_right_val;
+
+    printf("Enter the value for the root node: ");
+    scanf("%d", &root_val);
+
+    printf("Enter the value for the left child of the root node: ");
+    scanf("%d", &left_val);
+
+    printf("Enter the value for the right child of the root node: ");
+    scanf("%d", &right_val);
+
+    printf("Enter the value for the left child of the left child of the root node: ");
+    scanf("%d", &left_left_val);
+
+    printf("Enter the value for the right child of the left child of the root node: ");
+    scanf("%d", &left_right_val);
+
+    printf("Enter the value for the left child of the left child of the left child of the root node: ");
+    scanf("%d", &left_left_left_val);
+
+    printf("Enter the value for the right child of the left child of the left child of the root node: ");
+    scanf("%d", &left_left_right_val);
+
+    printf("Enter the value for the left child of the right child of the root node: ");
+    scanf("%d", &right_left_val);
+
+    printf("Enter the value for the right child of the right child of the root node: ");
+    scanf("%d", &right_right_val);
+
+    printf("Enter the value for the left child of the right child of the right child of the root node: ");
+    scanf("%d", &right_right_left_val);
+
+    printf("Enter the value for the right child of the right child of the right child of the root node: ");
+    scanf("%d", &right_right_right_val);
+
+    struct node* root = createNode(root_val);
+    root->left = createNode(left_val);
+    root->right = createNode(right_val);
+    root->left->left = createNode(left_left_val);
+    root->left->right = createNode(left_right_val);
+    root->left->left->left = createNode(left_left_left_val);
+    root->left->left->right = createNode(left_left_right_val);
+    root->right->left = createNode(right_left_val);
+    root->right->right = createNode(right_right_val);
+    root->right->right->left = createNode(right_right_left_val);
+    root->right->right->right = createNode(right_right_right_val);
+
+    printf("\n The Preorder traversal of given binary tree is -\n");
+    traversePreorder(root);
+    printf("\n The Inorder traversal of given binary tree is -\n");
+    traverseInorder(root);
+    printf("\n The Postorder traversal of given binary tree is -\n");
+    traversePostorder(root);
+
+    return 0;
+}
+
+
+
+
+
+
+
+                                                                                                                                EXPLANATION 
+        36
+       /  \
+     26    46
+    / \   / \
+  21  31 41  56
+ / \        / \
+11  24    51   66
+
+
+The root node has a value of 36.
+
+The left child of the root node has a value of 26.
+
+The right child of the root node has a value of 46.
+
+The left child of the node with value 26 has a value of 21.
+
+The right child of the node with value 26 has a value of 31.
+
+The left child of the node with value 21 has a value of 11.
+
+The right child of the node with value 21 has a value of 24.
+
+The left child of the node with value 46 has a value of 41.
+
+The right child of the node with value 46 has a value of 56.
+
+The left child of the node with value 56 has a value of 51.
+
+The right child of the node with value 56 has a value of 66.
+
+This binary tree has a total of 11 nodes, with the root node at the top and the leaf nodes at the bottom.
+
+
