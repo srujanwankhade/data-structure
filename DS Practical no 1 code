@@ -1,0 +1,155 @@
+                                                                                                      Practical No 1
+Write a program to perform following operations on array.
+                    i. Find out largest number and find its location.
+                    ii. a) Insert an element in an array b) delete an element from an array.
+                    iii. Traverse an array and find the sum and average of data elements from an array.
+Program Code:
+_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________        
+                                                                              1) Find out largest number and find its location
+
+#include <stdio.h>
+
+// Function to find the maximum in arr[] of size n
+int largest(int arr[], int n) {
+    // Check if the array is empty
+    if (n <= 0) {
+        printf("Array is empty.\n");
+        return -1; // Return an error value
+    }
+
+    // Initialize maximum element
+    int max = arr[0];
+
+    // Traverse array elements from the second and compare every element with the current max
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+
+    return max;
+}
+
+int main() {
+    int arr[] = { 10, 324, 45, 90, 9808 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    // Function call
+    int max = largest(arr, n);
+    if (max != -1) { // Check if the array was not empty
+        printf("Largest in given array is %d\n", max);
+    }
+
+    return 0;
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+                                                                          2) a) Insert an element in an array b) delete an element from an array.
+
+#include <stdio.h>
+#include <limits.h> // For INT_MIN
+
+// Function to find the maximum in arr[] of size n
+int largest(int arr[], size_t n) {
+    // Check if the array is empty
+    if (n == 0) {
+        printf("Array is empty.\n");
+        return INT_MIN; // Return a sentinel value indicating an error
+    }
+
+    // Initialize maximum element
+    int max = arr[0];
+
+    // Traverse array elements from the second and compare every element with the current max
+    for (size_t i = 1; i < n; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+
+    return max;
+}
+
+int main() {
+    int arr[] = { 10, 324, 45, 90, 9808 };
+    size_t n = sizeof(arr) / sizeof(arr[0]);
+
+    // Function call
+    int max = largest(arr, n);
+    if (max != INT_MIN) { // Check if the array was not empty
+        printf("Largest in given array is %d\n", max);
+    }
+
+    return 0;
+}
+
+______________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+                                                                              3) find the sum and average of data elements from an array
+                                                                                        
+                                                                                          Part 1: Sum of Array Elements
+
+#include <stdio.h>
+#include <stdlib.h> // For malloc and free
+
+int main() {
+    int size;
+
+    printf("Enter size of the array: ");
+    scanf("%d", &size);
+
+    // Validate size input
+    if (size <= 0) {
+        printf("Size must be a positive integer.\n");
+        return 1; // Exit with an error code
+    }
+
+    // Dynamically allocate memory for the array
+    int *arr = (int *)malloc(size * sizeof(int));
+    if (arr == NULL) {
+        printf("Memory allocation failed.\n");
+        return 1; // Exit with an error code
+    }
+
+    printf("Enter array elements:\n");
+    for (int i = 0; i < size; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int sum = 0;
+    for (int i = 0; i < size; i++) {
+        sum += arr[i];
+    }
+
+    printf("Sum of the array is: %d\n", sum);
+
+    // Free the allocated memory
+    free(arr);
+
+    return 0;
+}
+
+
+                                                                                          Part 2: Traverse and Print Array
+
+#include <stdio.h>
+
+void printArray(int* arr, int n) {
+    printf("Array: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int arr[] = { 2, -1, 5, 6, 0, -3 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+    printArray(arr, n);
+    return 0;
+}
+
+
